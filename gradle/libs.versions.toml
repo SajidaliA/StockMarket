@@ -7,7 +7,14 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.4"
 activityCompose = "1.9.1"
-composeBom = "2024.04.01"
+composeBom = "2024.06.00"
+hilt = "2.49"
+retrofit = "2.11.0"
+ksp = "1.9.0-1.0.13"
+loggingInterceptor = "4.12.0"
+room = "2.6.1"
+swipe-refresh = "0.24.2-alpha"
+destination = "1.1.2-beta"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,8 +31,21 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+com-google-dagger = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+com-google-dagger-ksp = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+com-squareup-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+com-squareup-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+com-squareup-okhttp3-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
+androidx-room = { group = "androidx.room", name = "room-runtime", version.ref = "room"}
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room"}
+androidx-room-ksp = { group = "androidx.room", name = "room-compiler", version.ref = "room"}
+com-google-accompanist = { group = "com.google.accompanist", name ="accompanist-swiperefresh", version.ref = "swipe-refresh"}
+io-github-raamcosta-compose-destinations = {group = "io.github.raamcosta.compose-destinations", name = "core", version.ref = "destination"}
+io-github-raamcosta-compose-destinations-ksp = {group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "destination"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
+com-google-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 

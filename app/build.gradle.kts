@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.ksp)
+    alias(libs.plugins.com.google.dagger.hilt.android)
 }
 
 android {
@@ -66,4 +68,15 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    ksp(libs.com.google.dagger.ksp)
+    implementation(libs.com.google.dagger)
+    implementation(libs.com.squareup.retrofit2)
+    implementation(libs.com.squareup.gson)
+    implementation(libs.com.squareup.okhttp3.logging)
+    implementation(libs.androidx.room)
+    ksp(libs.androidx.room.ksp)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.com.google.accompanist)
+    implementation(libs.io.github.raamcosta.compose.destinations)
+    ksp(libs.io.github.raamcosta.compose.destinations.ksp)
 }
